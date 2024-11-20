@@ -1,0 +1,34 @@
+Workflow Reflection
+
+1. Core Concepts: Briefly describe one primary design pattern or concept used in the Workflow Lab and its purpose in supporting workflow.
+
+In the workflow model, the details of how information flows within an organization is shown. The organization hospital has various organizations like lab, doctor and admin. Work can be assigned from one organization to another as a work request. For each organization, there is a work queue, which keeps track of assigned works. This is the pattern and its purpose is to enable cross communication amongst organizations.
+
+
+2. Roles and Workflow: Pick one role (e.g., Admin, Doctor, Lab Assistant) and explain how it contributes to the workflow’s functionality. Provide a brief example.
+	
+The role of doctor is part of the hospital organization. There will be an employee directory that every doctor would be part of. Every doctor will have a work queue, which will have a list of all works assigned to him. Doctors can assign work to other roles and vice versa. For example, lab assistant can assign work to a doctor to check on medical reports after doctor assigned work to lab assistant to conduct medical tests.
+
+
+3. Real-World Application: Describe a potential real-world scenario where this workflow model could be useful, such as in a university model or pricing model. Mention one modification you’d make to adapt it to that new context.
+	
+This can be very useful in the university model, where there are different roles like faculty, students, etc and there are various courses. The faculty can assign work to students. All the work assigned to a student from various faculties can be stored in their work queues. One modification that can be done is having TA’s in the model. This way students can assign TAs work of evaluating assignments upon completion.
+
+
+
+Ecosystem Model Reflection
+
+1. Project Scope and Complexity: Summarize the Ecosystem model’s complexity. How does it differ from the domain models you’ve learned, and what impact does this complexity have on user interaction?
+
+Ecosystem model is quite more complex than the workflow model. Workflow model is a part of the ecosystem model. Workflow model only dealt with doctors, labs and admin within hospital organization, here in the ecosystem model, there are organizations for system admin, enterprise admin, doctor and lab. The doctor and lab organizations are within the hospital organization whereas enterprise admin is within an admin organization and system role admin is independent. Every organization has a landing page of its own. Doctors and labs have a request module too, which is not the case with system admin and enterprise admin roles. The impact it creates is that there is a clear hierarchy. System admin manages enterprise admin, which manages other organizations(doctor and lab).
+	
+
+2. Interdependencies: Choose one key component of the Ecosystem model and explain its role in the broader workflow, noting how it connects with other parts of the system.
+
+The component I’d choose would be the enterprise admin role. It acts as a central component, connecting others. It is managed by the system admin and it manages the doctor and lab organizations. So, it connects system admin to doctor and lab organizations.
+
+3. Scaling and User Experience: Imagine this model was scaled for a larger user base. What is one challenge you foresee, and how might you improve the user experience for scalability?
+
+In a larger user base, many hospitals would come. Each would have many doctors and labs. There should be a proper hierarchy to manage everything. For couple of hospitals, there should be one entreprise admin. But the ratio of enterprise admins to hospitals should not be too low. Same way, there should be one system admin for couple of enterprise admins.
+
+
