@@ -48,7 +48,7 @@ public class AnalysisHelper {
             }
         }
         int postid = cmtMaxLikes.getPostId () ;
-        System.out.println("Q2 - post with max likes per comment " + data.getPosts ().get (postid).toString ());
+        System.out.println("Q2 - post with max likes per comment: " + data.getPosts ().get (postid).getPostId());
         }
     
     public void getmaxCmtPosts () {
